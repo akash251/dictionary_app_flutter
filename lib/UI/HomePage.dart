@@ -50,7 +50,7 @@ class HomePage extends StatelessWidget {
                   ),
                   IconButton(
                       onPressed: () {
-                        String value = searchController.toString();
+                        String value = searchController.text.trim();
                         ref.watch(dictionaryProvider.notifier).searchWord(value);
                       },
                       icon: Icon(
